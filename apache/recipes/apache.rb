@@ -15,6 +15,8 @@ service "httpd" do
     action [:enable,:start]
 end
 
+$ ps -ef | grep httpd
+
 file '/var/www/html/index.html' do
   content '<html>
   <body>
